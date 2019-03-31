@@ -694,7 +694,91 @@ public class EmployeeDAL extends Database{
                 
     } 
        
+     // Edit Employee 
+      public void EditEmployee (Employee employeeModel) throws SQLException{
+        conn = getConnection(); 
+         try { 
+             stmt = conn.createStatement();
+         } catch (SQLException ex) {
+             Logger.getLogger(EmployeeDAL.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+         int MaNV = employeeModel.getMaNV(); 
+         String Phai = employeeModel.getPhai(); 
+         int CMND = employeeModel.getCMND();
+         String NgayCapCMND = employeeModel.getNgayCapCMND();
+         String NoiCapCMND = employeeModel.getNoiCapCMND();
+         String Sothe = employeeModel.getSothe();
+         String HoTen = employeeModel.getHoTen();
+         String NamSinh = employeeModel.getNamSinh();
+         String NoiSinh = employeeModel.getNoiSinh();
+         String DiaChiThuongTru = employeeModel.getDiaChiThuongTru();
+         String DiaChiTamTru = employeeModel.getDiaChiTamTru();
+         int DienThoaiThuongTru = employeeModel.getDienThoaiThuongTru();
+         int DiDong = employeeModel.getDiDong();
+         String Email = employeeModel.getEmail();
+         String NgayVaoDoan = employeeModel.getNgayVaoDoan();
+         String NgayVaoDang = employeeModel.getNgayVaoDang();
+         String DanToc = employeeModel.getDanToc();
+         String TonGiao = employeeModel.getTonGiao();
+         String QuocTich = employeeModel.getQuocTich();
+         int Passport = employeeModel.getPassport();
+         String NgayCapPassport = employeeModel.getNgayCapPassport();
+         String NoiCapPassport = employeeModel.getNoiCapPassport();
+         String TinhTrangHonNhan = employeeModel.getTinhTrangHonNhan();
+         int MaSoThue = employeeModel.getMaSoThue();
+         String NgayCapMST = employeeModel.getNgayCapMST();
+         int SoTaiKhoan = employeeModel.getSoTaiKhoan();
+         String MaTaiKhoan = employeeModel.getMaTaiKhoan();
+         String NganHang = employeeModel.getNganHang();
+         String TrinhDo = employeeModel.getTrinhDo();
+         String BangCap = employeeModel.getBangCap();
+         String HocHam = employeeModel.getHocHam();
+         String ChuyenMon = employeeModel.getChuyenMon();
+         String KNLVChuyenMon = employeeModel.getKNLVChuyenMon();
+         String LoaiNhanVien = employeeModel.getLoaiNhanVien();
+         String DonVi = employeeModel.getDonVi();
+         String PhongBan = employeeModel.getPhongBan();
+         String BoPhan = employeeModel.getBoPhan();
+         String ChucDanh = employeeModel.getChucDanh();
+         String ChucVu = employeeModel.getChucVu();
+         String DiaDiemLamViec = employeeModel.getDiaDiemLamViec();
+         String LuongThuViec = employeeModel.getLuongThuViec();
+         String LuongCB = employeeModel.getLuongCB();
+         String LuongKD = employeeModel.getLuongKD();
+         String NgayVaoCty = employeeModel.getNgayVaoCty();
+         String NgayHetHanTV = employeeModel.getNgayHetHanTV();
+         String NgayVaoChinhThuc = employeeModel.getNgayVaoChinhThuc();      
+         String sql = "UPDATE nhanvien SET Phai = "+Phai+", CMDN = '"+CMND+"',NgayCapCMND = '"+NgayCapCMND+"',"
+                 + " NoiCapCMND = '"+NoiCapCMND+"' , Sothe = '"+Sothe+", HoTen = '"+HoTen+"', NamSinh = '"+NamSinh+"',"
+                 + " NoiSinh = '"+NoiSinh+"', DiaChiThuongTru = '"+DiaChiThuongTru+"', DiaChiTamTru = '"+DiaChiTamTru+"', DienThoaiThuongTru = '"+DienThoaiThuongTru+"',"
+                 + " DiDong = '"+DiDong+"', Email = '"+Email+"', NgayVaoDoan = '"+NgayVaoDoan+"', NgayVaoDang = '"+NgayVaoDang+"',"
+                 + " DanToc = '"+DanToc+"', TonGiao = '"+TonGiao+"', QuocTich = '"+QuocTich+"', Passport = '"+Passport+"',"
+                 + " NgayCapPassport = '"+NgayCapPassport+"', NoiCapPassport = '"+NoiCapPassport+"', TinhTrangHonNhan = '"+TinhTrangHonNhan+"',"
+                 + " MaSoThue = '"+MaSoThue+"', NgayCapMST = '"+NgayCapMST+"', SoTaiKhoan = '"+SoTaiKhoan+"', MaTaiKhoan = '"+MaTaiKhoan+"',"
+                 + " NganHang = '"+NganHang+"', TrinhDo = '"+TrinhDo+"', BangCap = '"+BangCap+"', HocHam = '"+HocHam+"',"
+                 + " ChuyenMon = '"+ChuyenMon+"', KNLVChuyenMon = '"+KNLVChuyenMon+"', LoaiNhanVien = '"+LoaiNhanVien+"', DonVi = '"+DonVi+"',"
+                 + " PhongBan = '"+PhongBan+"', BoPhan = '"+BoPhan+"', ChucDanh = '"+ChucDanh+"', ChucVu = '"+ChucVu+"',"
+                 + " DiaDiemLamViec = '"+DiaDiemLamViec+"', LuongThuViec = '"+LuongThuViec+"', LuongCB = '"+LuongCB+"',"
+                 + " LuongKD = '"+LuongKD+"', NgayVaoCty = '"+NgayVaoCty+"', NgayHetHanTV = '"+NgayHetHanTV+"',"
+                 + " NgayVaoChinhThuc = '"+NgayVaoChinhThuc+"'WHERE MaNV = "+MaNV+" ";
+         stmt.executeUpdate(sql);
+         
+    }
+      // Delete Employee 
+      public void DeleteEmployee (int MaNV) throws SQLException{
+        conn = getConnection(); 
+         try { 
+             stmt = conn.createStatement();
+         String sql = "DELETE FROM nhanvien WHERE MaNV = "+MaNV+" ";
+         stmt.executeUpdate(sql);
+         } catch (SQLException ex) {
+             Logger.getLogger(EmployeeDAL.class.getName()).log(Level.SEVERE, null, ex);
+         }  
+         
+    }
     
     
     
+    
+
 }
