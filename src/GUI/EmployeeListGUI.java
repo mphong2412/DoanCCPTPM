@@ -1,10 +1,7 @@
-﻿/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
+import GUI.EmployeeGUI;
 import BLL.EmployeeBLL;
 import DTO.Employee;
 import java.awt.Dimension;
@@ -344,7 +341,7 @@ public class EmployeeListGUI extends javax.swing.JFrame {
 //            String LKD = jTable1.getModel().getValueAt(selectedRow, 42).toString();
             String NVCT = jTable1.getModel().getValueAt(selectedRow, 43).toString();
             String NHHHD = jTable1.getModel().getValueAt(selectedRow, 44).toString();
-            String NVaoCT = jTable1.getModel().getValueAt(selectedRow, 45).toString();          
+            String NVaoCT = jTable1.getModel().getValueAt(selectedRow, 45).toString();
             emGui.jTextField1.setText(MaNV);
             emGui.jComboBox1.setSelectedItem(cbPhai);
             emGui.jTextField2.setText(CMND);
