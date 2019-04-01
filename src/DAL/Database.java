@@ -18,7 +18,8 @@ import javax.swing.JOptionPane;
  */
 public class Database {
     static  final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL= "jdbc:mysql://localhost/mydb?zeroDateTimeBehavior=convertToNull"; 
+//    static final String DB_URL= "jdbc:mysql://localhost/mydb?zeroDateTimeBehavior=convertToNull"; 
+    static final String DB_URL= "jdbc:mysql://localhost:3306/employee"; 
     static  final String USER = "root"; 
     static  final String PASS = ""; 
     

@@ -498,6 +498,11 @@ public class Login extends javax.swing.JDialog {
         setResizable(false);
     }
 
+    public static void main(String args[]) {
+        /* Create and display the form */
+      new Login().setVisible(true);
+      
+    }
     
    
 

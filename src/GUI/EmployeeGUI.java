@@ -1,8 +1,4 @@
-﻿/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
 import BLL.EmployeeBLL;
@@ -449,12 +445,12 @@ public class EmployeeGUI extends javax.swing.JFrame {
         jComboBox9 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jDateChooser5 = new com.toedter.calendar.JDateChooser();
         jDateChooser6 = new com.toedter.calendar.JDateChooser();
         jDateChooser7 = new com.toedter.calendar.JDateChooser();
         jDateChooser8 = new com.toedter.calendar.JDateChooser();
         jDateChooser9 = new com.toedter.calendar.JDateChooser();
+        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jPanel4 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -647,16 +643,12 @@ public class EmployeeGUI extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(887, 0, 260, 266));
-        jPanel2.add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(391, 40, 180, -1));
-        jPanel2.add(jDateChooser5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 180, -1));
-
-        jDateChooser6.setDateFormatString("dd/MM/yyyy");
-        jPanel2.add(jDateChooser6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 180, -1));
+        jPanel2.add(jDateChooser5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 150, -1));
+        jPanel2.add(jDateChooser6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 170, -1));
         jPanel2.add(jDateChooser7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 200, -1));
-
-        jDateChooser8.setDateFormatString("dd/MM/yyyy");
-        jPanel2.add(jDateChooser8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 180, -1));
-        jPanel2.add(jDateChooser9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 200, -1));
+        jPanel2.add(jDateChooser8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 170, -1));
+        jPanel2.add(jDateChooser9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 200, -1));
+        jPanel2.add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 180, -1));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bằng cấp kinh nghiệm", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -709,9 +701,9 @@ public class EmployeeGUI extends javax.swing.JFrame {
 
         jLabel39.setText("Ngày hết hạn TV");
         jPanel5.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 27, 100, 20));
-        jPanel5.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 27, 175, -1));
-        jPanel5.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(677, 27, 202, -1));
-        jPanel5.add(jDateChooser10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 170, -1));
+        jPanel5.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 160, -1));
+        jPanel5.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 170, -1));
+        jPanel5.add(jDateChooser10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 150, -1));
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nơi làm việc", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -844,7 +836,9 @@ public class EmployeeGUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -872,7 +866,7 @@ public class EmployeeGUI extends javax.swing.JFrame {
                 String cbNoiCapCM = jComboBox6.getSelectedItem().toString() ;
                 String Sothe = jTextField8.getText();
                 String HoTen = jTextField15.getText();                
-                String NamSinh = ns.format(jDateChooser4.getDate());   
+                String NamSinh = ns.format(jDateChooser7.getDate());   
                 String cbNS = jComboBox5.getSelectedItem().toString() ;                            
                 String DiaChiThuongTru = jTextField3.getText();
                 String DiaChiTamTru = jTextField4.getText();
